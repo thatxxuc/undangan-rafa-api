@@ -22,7 +22,7 @@ Route::prefix('/api')->group(function () {
     });
 
     // Comment
-    Route::prefix('/comment')->middleware(AuthMiddleware::class)->group(function () {
+    Route::prefix('/comment')->group(function () {
 
         // Get and create comment
         Route::controller(CommentController::class)->group(function () {
